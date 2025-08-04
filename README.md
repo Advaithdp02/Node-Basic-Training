@@ -28,3 +28,25 @@ Before running this script, ensure you have the following installed:
 
 ```bash
 cd your-folder-name
+```
+3. Install dependencies
+
+```bash
+
+npm install mongoose
+
+```
+```bash
+
+node insertAndDisplayStudents.js
+```
+Expected Output 
+
+Confirmation of MongoDB connection
+
+Insertion of student data
+
+List of all students (unsorted)
+
+List of all students sorted by marks (highest to lowest)
+
