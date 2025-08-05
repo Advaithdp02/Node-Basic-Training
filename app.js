@@ -1,12 +1,11 @@
 const mongoose = require('mongoose');
 
-// MongoDB Connection
 const mongoURI = 'mongodb://localhost:27017/studentdb';
 mongoose.connect(mongoURI)
   .then(async () => {
     console.log('✅ Connected to MongoDB');
 
-    // Schema & Model
+  
     const studentSchema = new mongoose.Schema({
       name: String,
       age: Number,
@@ -15,10 +14,8 @@ mongoose.connect(mongoURI)
 
     const Student = mongoose.model('Student', studentSchema);
 
-    // Clear existing data to avoid duplicates (optional)
     await Student.deleteMany({});
 
-    // Insert students
     const studentsData = [
       { name: "Aarav", age: 18, marks: 85 },
       { name: "Advaith", age: 19, marks: 91 },
